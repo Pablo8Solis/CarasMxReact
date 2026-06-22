@@ -125,4 +125,13 @@ const Span = styled.span`
     color: ${props => props.theme.colors.colorPrincipal};
     `;
 
-export { SubscribeStyles, SubscribeTitle, Form, Input, Button, SuccessMessage, ErrorMessage, Title, Text, Span };
+const FieldError = styled.span`
+  color: #ED1E1E;
+  font-size: 1.1rem;
+  font-family: monserrat, sans-serif;
+  align-self: flex-start;
+  margin-top: -0.4rem;
+  margin-bottom: 0.4rem;
+`;
+
+export { SubscribeStyles, SubscribeTitle, Form, Input, Button, SuccessMessage, ErrorMessage, Title, Text, Span, FieldError };

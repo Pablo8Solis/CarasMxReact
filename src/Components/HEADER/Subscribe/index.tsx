@@ -1,17 +1,35 @@
 import React, { useState } from 'react';
-import { SubscribeStyles, SubscribeTitle, Form, Input, Button, SuccessMessage, ErrorMessage, Title,Text, Span } from './styles';
+import { SubscribeStyles, SubscribeTitle, Form, Input, Button, SuccessMessage, ErrorMessage, Title, Text, Span, FieldError } from './styles';
+import { validateEmail, validateName } from '../../../utils/validation';
 
 const Subscribe = (): JSX.Element => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [status, setStatus] = useState<'success' | 'error' | null>(null);
   const [error, setError] = useState('');
-
-  const validateEmail = (value: string): boolean => /\S+@\S+\.\S+/.test(value);
+  const [nameError, setNameError] = useState<string>('');
+  const [emailError, setEmailError] = useState<string>('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    if (!name.trim() || !validateEmail(email)) {
+    setNameError('');
+    setEmailError('');
+    setStatus(null);
+    setError('');
+
+    let hasError = false;
+
+    if (!validateName(name)) {
+      setNameError('El nombre es requerido.');
+      hasError = true;
+    }
+
+    if (!validateEmail(email)) {
+      setEmailError('El correo electrónico no es válido.');
+      hasError = true;
+    }
+
+    if (hasError) {
       setError('Por favor ingresa un nombre y un correo válido.');
       setStatus('error');
       return;
@@ -23,6 +41,8 @@ const Subscribe = (): JSX.Element => {
       setError('');
       setName('');
       setEmail('');
+      setNameError('');
+      setEmailError('');
     }, 600);
   };
 
@@ -38,12 +58,14 @@ const Subscribe = (): JSX.Element => {
           placeholder="Nombre"
           aria-label="Nombre"
         />
+        {nameError && <FieldError data-testid="name-error">{nameError}</FieldError>}
         <Input
           value={email}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
           placeholder="Correo electrónico"
           aria-label="Correo electrónico"
         />
+        {emailError && <FieldError data-testid="email-error">{emailError}</FieldError>}
         <Button type="submit">Suscribirme</Button>
       </Form>
 
