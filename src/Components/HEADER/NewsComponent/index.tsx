@@ -11,7 +11,7 @@ interface NewsComponentProps {
 
 const NewsComponent = ({ categoria, imagen, alt, titulo, fecha, className }: NewsComponentProps): JSX.Element => {
     return (
-        <NewsStyles className={className}>
+        <NewsStyles className={className} tabIndex={0}>
             <NewsCategoriaText>{categoria}</NewsCategoriaText>
             <NewsImg src={imagen} alt={alt} />
             <NewsTitle>{titulo}</NewsTitle>

@@ -52,21 +52,29 @@ const Subscribe = (): JSX.Element => {
       <Title>Todo Caras <br></br> <Span>en tu correo</Span></Title>
       <Text>Moda, belleza y celebrities. Cada semana.</Text>
       <Form onSubmit={handleSubmit}>
+        <label htmlFor="name">Ingresa tu nombre</label>
         <Input
+          id="name"
           value={name}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
           placeholder="Nombre"
           aria-label="Nombre"
+          aria-role="textbox"
         />
         {nameError && <FieldError data-testid="name-error">{nameError}</FieldError>}
+        <label htmlFor="email">Ingresa tu correo electrónico</label>
         <Input
+          id="email"
           value={email}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
           placeholder="Correo electrónico"
           aria-label="Correo electrónico"
+          aria-role="textbox"
         />
         {emailError && <FieldError data-testid="email-error">{emailError}</FieldError>}
-        <Button type="submit">Suscribirme</Button>
+        <Button type="submit" aria-label="Suscribirme">
+          Suscribirme
+        </Button>
       </Form>
 
       {status === 'success' && <SuccessMessage>Gracias por suscribirte.</SuccessMessage>}

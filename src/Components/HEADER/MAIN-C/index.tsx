@@ -16,7 +16,7 @@ const Main = (): JSX.Element => {
                         <Buttons nameOfButton="Leer historia" />
                 </MainSection1>
                 <MainSection2>
-                        <MainImg src="/img/Portada2-H.webp" alt="Portada de la semana" />
+                        <MainImg src="/img/Portada2-H.webp" alt="Portada de la semana de caras" />
                 </MainSection2>
            </MainSectionFlex>
 
@@ -25,15 +25,15 @@ const Main = (): JSX.Element => {
                     className="div1"
                     categoria="Sports"
                     imagen="/img/Portada-V.png"
-                    alt="Tendencia 1"
+                    alt="Imagen de Isac Reyes en cancha del estadio Azteca"
                     titulo="EN PORTADA Israel Reyes nos habla sobre el orgullo de representar a México"
                     fecha="Mayo 19, 2026"
                 />
-                <NewsComponent 
+                <NewsComponent
                     className="div2"
                     categoria="Entretenimiento"
                     imagen="/img/Tendencia2.webp"
-                    alt="Tendencia 1"
+                    alt="Imgaen de Johnny Depp"
                     titulo="Revelan quién fue el gran amor que marcó para siempre a Johnny Depp y no es Winona Ryder"
                     fecha="Junio 09, 2026
 "
@@ -42,7 +42,7 @@ const Main = (): JSX.Element => {
                     className="div3"
                     categoria="Entretenimiento"
                     imagen="/img/Tendencia3.webp"
-                    alt="Tendencia 1"
+                    alt="Imagen de Isaac Moreno con Galilea Montijo tomados de la mano"
                     titulo="Isaac Moreno sorprende a Galilea Montijo con emotiva fiesta de cumpleaños"
                     fecha="Junio 09, 2026
  "
@@ -51,7 +51,7 @@ const Main = (): JSX.Element => {
                     className="div4"
                     categoria="Entretenimiento"
                     imagen="/img/Tendencia4.webp"
-                    alt="Tendencia 1"
+                    alt="Imagen de Katy Perry y Justin Trudeau en la alfombra del Tribeca Film Festival"
                     titulo="Katy Perry y Justin Trudeau debutan en la alfombra del Tribeca Film Festival"
                     fecha="Junio 09, 2026"
                 />
@@ -59,7 +59,7 @@ const Main = (): JSX.Element => {
                     className="div5"
                     categoria="Entretenimiento"
                     imagen="/img/Tendencia5.webp"
-                    alt="Tendencia 1"
+                    alt="Imagen de Grace Gummer"
                     titulo="Grace Gummer rompe el silencio tras las críticas del hijo de Caroline Kennedy a su actuación en ‘Love Story’"
                         fecha="20 de septiembre de 2024"
                     />
@@ -74,21 +74,21 @@ const Main = (): JSX.Element => {
                         imagen="/img/Profundidad1.webp"
                         titulo="Hublot presenta el Big Bang Reloaded Kylian Mbappé"
                         descripcion="Se trata de la primera edición limitada creada junto con el icono del fútbol y embajador de Hublot, Kylian Mbappé."
-                        tituloImg="Imagen de profundidad 1"
+                        tituloImg="Imagen de Mbappé con el reloj Hublot Big Bang Reloaded"
                     />
                     <ProfundidadComponent
                         genero="Entretenimiento"
                         imagen="/img/Profundidad2.webp"
                         titulo="HardWear by Tiffany: la nueva joya relojera que transforma el tiempo en una declaración de estilo"
                         descripcion="Recientemente Tiffany & Co. lanzó la campaña Summer Icons destacando el reloj Tiffany Hardwear. La inspiración de HardWear proviene de un brazalete de 1962."
-                        tituloImg="Imagen de profundidad 2"
+                        tituloImg="Imagen de reloj Tiffany HardWear"
                     />
                     <ProfundidadComponent
                         genero="Entretenimiento"
                         imagen="/img/Profundidad3.webp"
                         titulo="Tiempo que se hereda: tres relojes Bulova para celebrar el legado de papá"
                         descripcion="Un análisis profundo sobre cómo la crisis económica afecta a la industria del entretenimiento."
-                        tituloImg="Imagen de profundidad 3"
+                        tituloImg="Imagen de reloj Bulova"
                     />
                 </ProfundidadFlex>
             </ProfundidadStyles>

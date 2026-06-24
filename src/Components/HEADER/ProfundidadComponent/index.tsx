@@ -12,7 +12,7 @@ interface ProfundidadComponentProps {
 
 const ProfundidadComponent = ({ genero, titulo, descripcion, imagen, tituloImg }: ProfundidadComponentProps): JSX.Element => {
     return (
-        <ProfundidadStyles2>
+        <ProfundidadStyles2 tabIndex={0}>
             <section>
                 <ProfundidadImg src={imagen} alt={tituloImg} />
             </section>

@@ -16,13 +16,13 @@ const Header = (): JSX.Element => {
       <SectionNav>
             <nav>
                   <ul>
-                        <li><a href="#">LifeStyle</a></li>
-                        <li><a href="#">Moda</a></li>
-                        <li><a href="#">Belleza</a></li>
-                        <li><a href="#">Entretenimiento</a></li>
-                        <li><a href="#">Sports</a></li>
-                        <li><a href="#">Personalidades</a></li>
-                        <li><a href="#">Caras Travel</a></li>
+                        <li><a href="#" aria-label="Ir a seccion LifeStyle" lang="en">LifeStyle</a></li>
+                        <li><a href="#" aria-label="Ir a seccion Moda" lang="es">Moda</a></li>
+                        <li><a href="#" aria-label="Ir a seccion Belleza" lang="es">Belleza</a></li>
+                        <li><a href="#" aria-label="Ir a seccion Entretenimiento" lang="es">Entretenimiento</a></li>
+                        <li><a href="#" aria-label="Ir a seccion Sports" lang="en">Sports</a></li>
+                        <li><a href="#" aria-label="Ir a seccion Personalidades" lang="es">Personalidades</a></li>
+                        <li><a href="#" aria-label="Ir a seccion Caras Travel" lang="es">Caras Travel</a></li>
                   </ul>
             </nav>
         </SectionNav>
