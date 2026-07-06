@@ -11,7 +11,7 @@ const Main = (): JSX.Element => {
             <MainStylesP>Portada de la semana</MainStylesP>
             <MainSectionFlex id="portada">
                 <MainSection1>
-                        <h2>Gracie Abrams revela por qué le dio miedo vivir con su pareja, el actor Paul Mescal</h2>
+                        <h1>Gracie Abrams revela por qué le dio miedo vivir con su pareja, el actor Paul Mescal</h1>
                         <p>La cantante confesó que la estabilidad que encontró junto al actor de “Gladiator II” la hizo cuestionar su propia carrera musical.</p>
                         <Buttons nameOfButton="Leer historia" />
                 </MainSection1>

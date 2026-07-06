@@ -52,13 +52,6 @@ const Input = styled.input`
   border-radius: 0.6rem;
   border: 1px solid #e6e6e6;
   font-size: 1.5rem;
-  transition: all 0.2s ease-in-out;
-
-  &:focus {
-    outline: none;
-    border-color: ${props => props.theme.colors.colorPrincipal};
-    box-shadow: 0 0 0 3px rgba(208, 58, 43, 0.15);
-  }
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
@@ -73,27 +66,6 @@ const Button = styled.button`
   border-radius: 0.6rem;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 2px 6px rgba(208, 58, 43, 0.2);
-
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 12px rgba(208, 58, 43, 0.35);
-  }
-
-  &:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(208, 58, 43, 0.2);
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:focus-visible {
-    outline: 3px solid ${props => props.theme.colors.colorBlack};
-    outline-offset: 3px;
-  }
 
   @media (max-width: 768px) {
     width: 100%;

@@ -56,7 +56,7 @@ const MainSection1 = styled.section`
     flex-direction: column;
     gap: 2rem;
     flex: 1;
-    h2 {
+    h1 {
         font-size: 3.5rem;
         font-family: ${props => props.theme.fonts.titles};
         color: ${props => props.theme.colors.colorGrisTexto};
@@ -69,7 +69,7 @@ const MainSection1 = styled.section`
     }
 
     @media (max-width: 1024px) {
-        h2 {
+        h1 {
             font-size: 2.8rem;
         }
 
@@ -81,7 +81,7 @@ const MainSection1 = styled.section`
     @media (max-width: 768px) {
         gap: 1rem;
 
-        h2 {
+        h1 {
             font-size: 2.2rem;
             line-height: 1.15;
         }
