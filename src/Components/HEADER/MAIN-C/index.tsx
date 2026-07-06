@@ -24,7 +24,7 @@ const Main = (): JSX.Element => {
                 <NewsComponent 
                     className="div1"
                     categoria="Sports"
-                    imagen="/img/Portada-V.png"
+                    imagen="/img/portada-V.png"
                     alt="Imagen de Isac Reyes en cancha del estadio Azteca"
                     titulo="EN PORTADA Israel Reyes nos habla sobre el orgullo de representar a México"
                     fecha="Mayo 19, 2026"
@@ -41,7 +41,7 @@ const Main = (): JSX.Element => {
                 <NewsComponent 
                     className="div3"
                     categoria="Entretenimiento"
-                    imagen="/img/Tendencia3.webp"
+                    imagen="/img/tendencia3.webp"
                     alt="Imagen de Isaac Moreno con Galilea Montijo tomados de la mano"
                     titulo="Isaac Moreno sorprende a Galilea Montijo con emotiva fiesta de cumpleaños"
                     fecha="Junio 09, 2026
@@ -50,7 +50,7 @@ const Main = (): JSX.Element => {
                  <NewsComponent 
                     className="div4"
                     categoria="Entretenimiento"
-                    imagen="/img/Tendencia4.webp"
+                    imagen="/img/tendencia4.webp"
                     alt="Imagen de Katy Perry y Justin Trudeau en la alfombra del Tribeca Film Festival"
                     titulo="Katy Perry y Justin Trudeau debutan en la alfombra del Tribeca Film Festival"
                     fecha="Junio 09, 2026"
