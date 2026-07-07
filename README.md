@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# 📖 Revista CARAS - Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una landing page moderna, responsiva y altamente accesible para la prestigiosa revista **CARAS** (Moda, belleza y celebridades). Este proyecto ha sido desarrollado utilizando **React**, **TypeScript** y **Styled Components**, bajo los más altos estándares de desarrollo web y accesibilidad (A11y).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologías Principales
 
-### `npm start`
+El proyecto utiliza un stack de tecnologías modernas orientadas al rendimiento y la mantenibilidad:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*   **[React (v18.2.0)](https://react.dev/)** - Biblioteca principal para la construcción de interfaces de usuario.
+*   **[TypeScript](https://www.typescriptlang.org/)** - Tipado estático para garantizar la robustez y calidad del código.
+*   **[Styled Components (v6.4.2)](https://styled-components.com/)** - Estilos CSS-in-JS con alcance modular y soporte para diseño dinámico y temas.
+*   **[Jest](https://jestjs.io/) & [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)** - Suite completa de pruebas para garantizar el comportamiento esperado del sitio.
+*   **[PNPM](https://pnpm.io/)** - Gestor de paquetes eficiente para dependencias rápidas y seguras.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Características y Secciones
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.  **Cabecera de Navegación Accesible (`<Header />`):** Menú responsivo con enlaces de navegación que redirigen a secciones específicas de la página. Soporte multilingüe utilizando atributos `lang` y etiquetas semánticas.
+2.  **Portada de la Semana:** Sección Hero que resalta la noticia principal con carga priorizada (`loading="eager"`) y layouts adaptables.
+3.  **Tendencias:** Grid interactivo que muestra las noticias más populares con categorías estilizadas (Moda, Entretenimiento, Sports).
+4.  **En Profundidad:** Espacio dedicado a artículos patrocinados y lanzamientos de alta gama (Bulova, Hublot, Tiffany & Co.).
+5.  **Testimonios:** Carrusel/Sección de reseñas de lectores y profesionales del sector con tarjetas interactivas adaptadas para navegación por teclado (`tabIndex={0}`).
+6.  **Formulario de Suscripción:** Formulario interactivo con validación en tiempo real (nombre y correo electrónico), control de estados (éxito/error) y accesibilidad avanzada (`aria-invalid`, `aria-describedby`, alertas de estado dinámicas).
+7.  **Pie de Página (`<Footer />`):** Créditos de la revista y navegación simplificada.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ♿ Accesibilidad (A11y) y Rendimiento
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Este sitio fue optimizado siguiendo las pautas de accesibilidad web (WCAG):
+*   **Estructura Semántica:** Uso riguroso de elementos HTML5 (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, `<h1>`-`<h2>` ocultos para lectores de pantalla).
+*   **Navegación por Teclado:** Elementos interactivos enfocables y ordenados lógicamente.
+*   **Optimización de Imágenes:** Atributos de dimensiones explícitas (`width` y `height`) para evitar el desplazamiento de diseño (CLS - Cumulative Layout Shift), uso de formatos optimizados (`.webp`) y carga diferida (`loading="lazy"`) para las imágenes debajo del pliegue.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Estructura del Proyecto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```text
+caras-landing/
+├── public/                # Recursos públicos (imágenes, logos, index.html)
+├── src/
+│   ├── Components/        # Componentes modulares y reutilizables
+│   │   ├── Footer/        # Pie de página y derechos de autor
+│   │   └── HEADER/        # Cabecera, Portada, Tendencias, Testimonios y Suscripción
+│   │       ├── Buttons/   # Botones globales
+│   │       ├── MAIN-C/    # Layout principal de contenido
+│   │       ├── NewsComponent/ # Tarjetas de noticias de tendencias
+│   │       ├── ProfundidadComponent/ # Sección de artículos en profundidad
+│   │       ├── Subscribe/ # Formulario de suscripción con validaciones
+│   │       └── Testimonials/ # Tarjetas de reseñas
+│   ├── theme/             # Configuración de Styled Components (Variables globales y reset)
+│   ├── tests/             # Archivos de pruebas unitarias y de integración
+│   ├── types/             # Definiciones de tipos TypeScript globales
+│   ├── utils/             # Helpers y lógica de validación de entradas
+│   ├── App.tsx            # Componente raíz de la aplicación
+│   └── index.tsx          # Punto de entrada de React
+├── package.json           # Dependencias y scripts de desarrollo
+└── tsconfig.json          # Configuración de TypeScript
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠️ Instalación y Configuración
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Requisitos Previos
 
-## Learn More
+Asegúrate de tener instalado [Node.js](https://nodejs.org/) (versión 16 o superior) y de preferencia [pnpm](https://pnpm.io/) (o npm en su defecto).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Pasos para iniciar localmente
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1.  **Clona el repositorio:**
+    ```bash
+    git clone https://github.com/tu-usuario/caras-react.git
+    cd caras-react/caras-landing
+    ```
 
-### Code Splitting
+2.  **Instala las dependencias:**
+    ```bash
+    pnpm install
+    # o bien
+    npm install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3.  **Inicia el servidor de desarrollo:**
+    ```bash
+    pnpm start
+    # o bien
+    npm start
+    ```
+    La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧪 Ejecución de Pruebas
 
-### Making a Progressive Web App
+El proyecto cuenta con cobertura de pruebas unitarias y de comportamiento para los formularios y la navegación.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Para ejecutar las pruebas en modo interactivo:
+```bash
+pnpm test
+# o bien
+npm test
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📦 Construcción para Producción
 
-### Deployment
+Para compilar la aplicación optimizada para producción:
+```bash
+pnpm build
+# o bien
+npm build
+```
+Esto creará una carpeta `build` lista para ser desplegada en plataformas de hosting como **Vercel**, **Netlify** o **GitHub Pages**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
